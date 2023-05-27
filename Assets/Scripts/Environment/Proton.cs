@@ -19,5 +19,6 @@ public class Proton : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
+        rb.velocity = rb.velocity.normalized * maxSpeed;
     }
 }

@@ -15,9 +15,9 @@ public class MagneticFieldController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         if (horizontalInput > 0)
-            fieldStrength.value = Mathf.Min(MaxFieldStrength, fieldStrength.value + fieldIncrement);
+            fieldStrength.value = Mathf.Min(MaxFieldStrength, fieldStrength.value + fieldIncrement * Time.deltaTime);
         else if(horizontalInput < 0)
-            fieldStrength.value = Mathf.Max(-MaxFieldStrength, fieldStrength.value - fieldIncrement);
+            fieldStrength.value = Mathf.Max(-MaxFieldStrength, fieldStrength.value - fieldIncrement * Time.deltaTime);
 
     }
 
@@ -36,7 +36,7 @@ public class MagneticFieldController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Rigidbody2D proton))
+        if (collision.gameObject.tag == "Proton" && collision.gameObject.TryGetComponent(out Rigidbody2D proton))
         {
             if(!TrySetProton(proton))
             {
