@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7684f7429de8574bb8d009246c0a650, type: 3}
   m_Name: MagneticFieldStrength
   m_EditorClassIdentifier: 
-  value: 4.084682
+  value: -2.8297086

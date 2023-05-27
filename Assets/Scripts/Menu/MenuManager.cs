@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-        
+        SceneLoader.Instance.currentScene = "InstructionScene";
+        SceneLoader.Instance.StartScene();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ContinueToGame()
     {
-        
+        SceneLoader.Instance.currentScene = "Level1Scene";
+        SceneLoader.Instance.StartScene();
     }
+
+    public void ReturnToMenu()
+    {
+        SceneLoader.Instance.currentScene = "MainMenuScene";
+        SceneLoader.Instance.StartScene();
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
