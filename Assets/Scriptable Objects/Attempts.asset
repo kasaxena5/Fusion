@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7684f7429de8574bb8d009246c0a650, type: 3}
-  m_Name: MagneticFieldStrength
+  m_Script: {fileID: 11500000, guid: 4379a2996a4dbf74aae4cdabdcc342b8, type: 3}
+  m_Name: Attempts
   m_EditorClassIdentifier: 
-  value: -3.7385433
+  value: 0

@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Electron : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Configs")]
+    [SerializeField] private float speed;
+
+    private readonly Vector3 pivotAxis = new(0, 0, 1);
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.RotateAround(transform.parent.position, pivotAxis, speed * Time.deltaTime);
     }
 }

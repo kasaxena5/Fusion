@@ -43,7 +43,7 @@ public class MagneticFieldRenderer : MonoBehaviour
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    if (fieldStrength.value > 0)
+                    if (fieldStrength.value < 0)
                     {
                         dots[i, j].SetActive(false);
                         crosses[i, j].SetActive(true);
@@ -53,7 +53,7 @@ public class MagneticFieldRenderer : MonoBehaviour
                         scale.x = scaleValue;
                         child.transform.localScale = scale;
                     }
-                    else
+                    else if(fieldStrength.value > 0)
                     {
                         dots[i, j].SetActive(true);
                         crosses[i, j].SetActive(false);
