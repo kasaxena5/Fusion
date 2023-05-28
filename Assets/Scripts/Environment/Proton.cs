@@ -43,6 +43,7 @@ public class Proton : MonoBehaviour
             {
                 UIManager.Instance.LevelCompleted();
             }
+            UIManager.Instance.ResetStrength();
         }
     }
 }

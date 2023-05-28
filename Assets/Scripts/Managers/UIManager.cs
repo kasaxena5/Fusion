@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] TMP_Text attemptText;
     [SerializeField] IntReference attempts;
+    [SerializeField] FloatReference fieldStrength;
     [SerializeField] GameObject nextLevelCanvas;
 
     private void Awake()
@@ -18,6 +19,17 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         else
             Instance = this;
+    }
+
+    private void Start()
+    {
+        fieldStrength.value = 0;
+        attempts.value = 1;
+    }
+
+    public void ResetStrength()
+    {
+        fieldStrength.value = 0;
     }
 
     void Update()

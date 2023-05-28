@@ -66,6 +66,11 @@ public class MagneticFieldRenderer : MonoBehaviour
                         dots[i, j].transform.localScale = scale;
 
                     }
+                    else
+                    {
+                        dots[i, j].SetActive(false);
+                        crosses[i, j].SetActive(false);
+                    }
                 }
             }
         }

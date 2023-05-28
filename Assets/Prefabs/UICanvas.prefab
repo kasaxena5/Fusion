@@ -749,6 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attemptText: {fileID: 3476754995565190180}
   attempts: {fileID: 11400000, guid: 35da5926e1679c545a7f275ccd6eb114, type: 2}
+  fieldStrength: {fileID: 11400000, guid: f66d7411c33d0904aaf75302a63e67ea, type: 2}
   nextLevelCanvas: {fileID: 0}
 --- !u!1 &3476754995565190182
 GameObject:
