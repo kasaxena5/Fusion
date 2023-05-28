@@ -15,7 +15,10 @@ public class NextLevelManager : MonoBehaviour
 
     public void LoadNextLevel(int level)
     {
-        SceneLoader.Instance.currentScene = "Level" + level + "Scene";
+        if(level == -1)
+            SceneLoader.Instance.currentScene = "GameOverMenuScene";
+        else
+            SceneLoader.Instance.currentScene = "Level" + level + "Scene";
         SceneLoader.Instance.StartScene();
     }
 }

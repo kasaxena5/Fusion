@@ -36,7 +36,8 @@ public class MagneticFieldRenderer : MonoBehaviour
 
     void Update()
     {
-        float scaleValue = fieldStrength.value * scaleFactor;
+        float scaleValue = 0.4f * Mathf.Abs(fieldStrength.value * scaleFactor) + 0.03f;
+
         for (int i = 0; i < n; i++)
         {
             for(int j = 0; j < m; j++)
