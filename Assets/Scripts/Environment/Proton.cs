@@ -7,6 +7,7 @@ public class Proton : MonoBehaviour
     [SerializeField] float maxSpeed;
     [Header("Prefabs")]
     [SerializeField] ParticleSystem explodePrefab;
+    [SerializeField] IntReference attempts;
 
     protected void DeployParticles()
     {
@@ -36,6 +37,12 @@ public class Proton : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Atom")
         {
             DeployParticles();
+            if (collision.gameObject.tag == "Obstacle")
+                attempts.value += 1;
+            else
+            {
+                UIManager.Instance.LevelCompleted();
+            }
         }
     }
 }

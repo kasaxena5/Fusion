@@ -9,13 +9,22 @@ public class ProtonEmitter : MonoBehaviour
     [Header("Configs")]
     [SerializeField] Vector2 protonInitialVelocity;
 
-    public void OnClick()
+    public void ShootProton()
     {
         if(!MagneticFieldController.CheckProton())
         {
             Proton proton = Instantiate(protonPrefab, protonShooter.transform.position, Quaternion.identity);
             proton.InitializeVelocity(protonInitialVelocity);
         }
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ShootProton();
+        }
+        
     }
 
 }
